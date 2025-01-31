@@ -27,8 +27,10 @@ Team Mates:
 **_Questions:_**
 
 1. What is the link of the fork OSProject in your repository. **_(1 mark)_**
+
    **<https://github.com/2217441/OSProject>**
 2. How many files and folders are in this repository. **_(1 mark)_**
+
    **There are 1 markdown file (README.md), 6 image files (CommittingUI.png, helloworldweb.png, newcodespace.png SourceControlUI.png, UIwebvscode.png and websitelink.png) and 1 folder (images)**
 
 ## Exploring github codespaces
@@ -61,10 +63,13 @@ Team Mates:
 **_Questions:_**
 
 1. What is default OS used to run the virtual environment for codespaces. **_(1 mark)_**
+
    **Ubuntu Linux**.
 2. What are the two options of ram, disk and vcpu configuration you can have in running codespaces . **_(1 mark)_**
+
    **1st Option: 2 cores, 8 GB RAM, and 32 GB storage. 2nd Option: 32 cores, 64 GB RAM, and 128 GB storage**.
 3. Why must we commit and sync our current work on source control? **_(1 mark)_**
+
    **We must commit and sync our current work on source control to ensure that no work is lost and it is updated and saved on the repository.**.
 
 ## Exploring the Terminal
@@ -299,19 +304,26 @@ Linux codespaces-80b974 6.5.0-1025-azure #26~22.04.1-Ubuntu SMP Thu Jul 11 22:33
 ```
 
 11. What is the available free memory in the system. **_(1 mark)_**
-    **6.0Gi**.
+
+   **6.0Gi**.
 12. What is the available disk space mounted on /workspace. **_(1 mark)_**
-    **19,531,032 kb**.
+
+   **19,531,032 kb**.
 13. Name the version and hardware architecture of the linux Virtual environment. **_(1 mark)_**
-    **Linux codespaces-80b974 6.5.0-1025-azure #26~22.04.1-Ubuntu SMP Thu Jul 11 22:33:04 UTC 2024 x86_64 x86_64 x86_64 GNU/Linux**.
+
+   **Linux codespaces-80b974 6.5.0-1025-azure #26~22.04.1-Ubuntu SMP Thu Jul 11 22:33:04 UTC 2024 x86_64 x86_64 x86_64 GNU/Linux**.
 14. What is the difference between **ls** vs **ls -asl**. **_(1 mark)_**
-    **The **ls** command lists files and directories in a directory, while **ls -asl** lists files and directories in a directory in long format (-l) with detailed information, including file permissions, owner, group, size, and modification date, and sorted by size (-s) in descending order**.
+
+   **The **ls** command lists files and directories in a directory, while **ls -asl** lists files and directories in a directory in long format (-l) with detailed information, including file permissions, owner, group, size, and modification date, and sorted by size (-s) in descending order**.
 15. What is the TLB size of the Virtual CPU. **_(1 mark)_**
-    **2560 4k pages**.
+
+   **2560 4k pages**.
 16. What is the CPU speed of the Virtual CPU. **_(1 mark)_**
-    **2.4GHz for Processor 0 and 2.9GHz for Processor 1**.
+
+   **2.4GHz for Processor 0 and 2.9GHz for Processor 1**.
 17. What is the top running process that consumes the most CPU cycles. **_(1 mark)_**
-    **1423**.
+
+   **1423**.
 
 ## Running your own container instance
 
@@ -377,8 +389,10 @@ f65be1987f84   debian    "bash"    19 minutes ago   Exited (137) 18 seconds ago 
 **_Questions:_**
 
 1. Are files in the container persistent. Why not?. **_(1 mark)_**
+
    **No. This is because the container are ephemeral (lasts only for a short time). All of the container's data, including created files, is erased when a container is destroyed with docker rm**.
 2. Can we run two, or three instances of debian linux? . **_(1 mark)_**
+
    **It is possible to run more than one instance of Debian Linux. Docker enables you to build and run multiple containers using the same or different images. You can run many instances of Debian simultaneously since each container runs in a separate, isolated environment**.
 
 ## Running your own container with persistent storage
@@ -399,6 +413,7 @@ f65be1987f84   debian    "bash"    19 minutes ago   Exited (137) 18 seconds ago 
 **_Questions:_**
 
 1. Check the permission of the files created in myroot, what user and group is the files created in docker container on the host virtual machine? . **_(2 mark)_**
+
    **It shows total 0 because there is no file currently present in the myroot directory**.
 
 ```bash
