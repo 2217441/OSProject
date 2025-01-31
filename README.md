@@ -308,21 +308,27 @@ Linux codespaces-80b974 6.5.0-1025-azure #26~22.04.1-Ubuntu SMP Thu Jul 11 22:33
 11. What is the available free memory in the system. **_(1 mark)_**
 
    **6.0Gi**.
+
 12. What is the available disk space mounted on /workspace. **_(1 mark)_**
 
    **19,531,032 kb**.
+
 13. Name the version and hardware architecture of the linux Virtual environment. **_(1 mark)_**
 
    **Linux codespaces-80b974 6.5.0-1025-azure #26~22.04.1-Ubuntu SMP Thu Jul 11 22:33:04 UTC 2024 x86_64 x86_64 x86_64 GNU/Linux**.
+
 14. What is the difference between **ls** vs **ls -asl**. **_(1 mark)_**
 
    **The **ls** command lists files and directories in a directory, while **ls -asl** lists files and directories in a directory in long format (-l) with detailed information, including file permissions, owner, group, size, and modification date, and sorted by size (-s) in descending order**.
+
 15. What is the TLB size of the Virtual CPU. **_(1 mark)_**
 
    **2560 4k pages**.
+
 16. What is the CPU speed of the Virtual CPU. **_(1 mark)_**
 
    **2.4GHz for Processor 0 and 2.9GHz for Processor 1**.
+
 17. What is the top running process that consumes the most CPU cycles. **_(1 mark)_**
 
    **1423**.
@@ -393,6 +399,7 @@ f65be1987f84   debian    "bash"    19 minutes ago   Exited (137) 18 seconds ago 
 1. Are files in the container persistent. Why not?. **_(1 mark)_**
 
    **No. This is because the container are ephemeral (lasts only for a short time). All of the container's data, including created files, is erased when a container is destroyed with docker rm**.
+
 2. Can we run two, or three instances of debian linux? . **_(1 mark)_**
 
    **It is possible to run more than one instance of Debian Linux. Docker enables you to build and run multiple containers using the same or different images. You can run many instances of Debian simultaneously since each container runs in a separate, isolated environment**.
