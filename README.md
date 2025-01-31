@@ -474,9 +474,17 @@ docker run --detach -v /workspaces/OSProject/webpage:/usr/local/apache2/htdocs/ 
 
 **_Questions:_**
 
-1. What is the permission of folder /usr/local/apache/htdocs and what user and group owns the folder? . **_(2 mark)_** **Fill answer here**.
-2. What port is the apache web server running. **_(1 mark)_** **Fill answer here**.
+1. What is the permission of folder /usr/local/apache/htdocs and what user and group owns the folder? . **_(2 mark)_**
+
+   **Permissions: drwxr-xr-x, User: root, Group: root**
+
+2. What port is the apache web server running. **_(1 mark)_**
+
+   **Port 80**
+
 3. What port is open for http protocol on the host machine? **_(1 mark)_** **Fill answer here**.
+
+   **Port 8080**
 
 ## Create SUB Networks
 
@@ -497,11 +505,39 @@ docker run -itd --net rednet --name c2 busybox sh
 
 **_Questions:_**
 
-1. Describe what is busybox and what is command switch **--name** is for? . **_(2 mark)_** **Fill answer here**.
-2. Explore the network using the command `docker network ls`, show the output of your terminal. **_(1 mark)_** **Fill answer here**.
-3. Using `docker inspect c1` and `docker inspect c2` inscpect the two network. What is the gateway of bluenet and rednet.? **_(1 mark)_** **Fill answer here**.
-4. What is the network address for the running container c1 and c2? **_(1 mark)_** **Fill answer here**.
-5. Using the command `docker exec c1 ping c2`, which basically tries to do a ping from container c1 to c2. Are you able to ping? Show your output . **_(1 mark)_** **Fill answer here**.
+1. Describe what is busybox and what is command switch **--name** is for? . **_(2 mark)_**
+
+      **BusyBox** is a software suite that provides many Unix utilities in a single executable, often used in embedded systems.
+
+      The **--name** switch is used to assign a specific name to a container or resource, such as in Docker.
+
+2. Explore the network using the command `docker network ls`, show the output of your terminal. **_(1 mark)_**
+
+'''bash
+@2217441 ➜ /workspaces/OSProject (main) $ docker network ls
+NETWORK ID     NAME      DRIVER    SCOPE
+e0e69016217d   bluenet   bridge    local
+7449123e89fe   bridge    bridge    local
+7f3d5dfd29fd   host      host      local
+885942ca4d6b   none      null      local
+18a7712013b5   rednet    bridge    local'''
+
+3. Using `docker inspect c1` and `docker inspect c2` inscpect the two network. What is the gateway of bluenet and rednet.? **_(1 mark)_**
+
+   **c1 is Bluenet Gateway: 172.18.0.1**
+   **c2 is Rednet Gateway: 172.19.0.1**.
+
+4. What is the network address for the running container c1 and c2? **_(1 mark)_**
+
+   **C1 Bluenet Network:172.18.0.2**
+   **C2 Rednet Network:172.19.0.2**.
+
+5. Using the command `docker exec c1 ping c2`, which basically tries to do a ping from container c1 to c2. Are you able to ping? Show your output . **_(1 mark)_**
+
+   **No**
+'''bash
+   @2217441 ➜ /workspaces/OSProject (main) $ docker exec c1 ping c2
+   ping: bad address 'c2''''
 
 ## Bridging two SUB Networks
 
@@ -516,8 +552,24 @@ docker exec c1 ping c2
 
 **_Questions:_**
 
-1. Are you able to ping? Show your output . **_(1 mark)_** **Fill answer here**.
-2. What is different from the previous ping in the section above? **_(1 mark)_** **Fill answer here**.
+1. Are you able to ping? Show your output . **_(1 mark)_**
+
+   **Yes**
+'''bash
+@2217441 ➜ /workspaces/OSProject (main) $ docker exec c1 ping c2
+PING c2 (172.20.0.3): 56 data bytes
+64 bytes from 172.20.0.3: seq=0 ttl=64 time=0.137 ms
+64 bytes from 172.20.0.3: seq=1 ttl=64 time=0.088 ms
+64 bytes from 172.20.0.3: seq=2 ttl=64 time=0.091 ms
+64 bytes from 172.20.0.3: seq=3 ttl=64 time=0.068 ms
+64 bytes from 172.20.0.3: seq=4 ttl=64 time=0.080 ms
+64 bytes from 172.20.0.3: seq=5 ttl=64 time=0.077 ms
+64 bytes from 172.20.0.3: seq=6 ttl=64 time=0.091 ms
+...'''
+
+2. What is different from the previous ping in the section above? **_(1 mark)_**
+
+   **The difference is in the previous ping, c1 and c2 on different networks. The latest ping, they already connected on the same network which is the bridgenet. When on the same network, they can communicate with each other unlike before.**.
 
 ## Intermediate Level (10 marks bonus)
 

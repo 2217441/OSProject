@@ -1,0 +1,134 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: system-ui, -apple-system, sans-serif;
+  }
+  
+  .desktop {
+    background: linear-gradient(45deg, #2c3e50, #3498db);
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .icon {
+    position: relative;
+    width: 80px;
+    height: 90px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    color: white;
+    text-align: center;
+    user-select: none;
+  }
+  
+  .icon:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+  }
+  
+  .icon-svg {
+    width: 48px;
+    height: 48px;
+    fill: white;
+    margin-bottom: 8px;
+  }
+  
+  .icon span {
+    font-size: 14px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+  }
+  
+  .window {
+    position: absolute;
+    left: 100px;
+    top: 100px;
+    width: 400px;
+    background: #f0f0f0;
+    border-radius: 8px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+    overflow: hidden;
+    resize: both;
+  }
+  
+  .title-bar {
+    background: linear-gradient(#5a5a5a, #404040);
+    color: white;
+    padding: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: move;
+    user-select: none;
+  }
+  
+  .window-controls {
+    display: flex;
+    gap: 6px;
+  }
+  
+  .window-controls button {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: none;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .window-controls .close { background: #ff605c; }
+  .window-controls .minimize { background: #ffbd44; }
+  .window-controls .maximize { background: #00ca4e; }
+  
+  .window-controls button:hover {
+    filter: brightness(0.9);
+  }
+  
+  .editor {
+    width: 100%;
+    height: 300px;
+    border: none;
+    padding: 12px;
+    font-family: monospace;
+    resize: none;
+    box-sizing: border-box;
+  }
+  
+  .calculator {
+    padding: 12px;
+  }
+  
+  .calculator .display {
+    background: white;
+    padding: 12px;
+    text-align: right;
+    font-size: 24px;
+    margin-bottom: 12px;
+    border-radius: 4px;
+    min-height: 30px;
+  }
+  
+  .calculator .buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 6px;
+  }
+  
+  .calculator button {
+    padding: 12px;
+    border: none;
+    background: #e0e0e0;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .calculator button:hover {
+    background: #d0d0d0;
+  }
