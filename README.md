@@ -719,8 +719,15 @@ You have now set up a Node.js application in a Docker container on nodejsnet net
 
 **_Questions:_**
 
-1. What is the output of step 5 above, explain the error? **_(1 mark)_** **Fill answer here**.
-2. Show the instruction needed to make this work. **_(1 mark)_** **Fill answer here**.
+1. What is the output of step 5 above, explain the error? **_(1 mark)_** **Nodejs and mysql are on different network.**.
+2. Show the instruction needed to make this work. **_(1 mark)_** 
+   To make the setup work, you need to bridge the two networks (`mysqlnet` and `nodejsnet`) so that the containers can communicate with each other. You can achieve this by connecting the Node.js container to the `mysqlnet` network.
+
+Here is the instruction to connect the Node.js container to the `mysqlnet` network:
+
+```bash
+docker network connect mysqlnet nodejs-container
+````
 
 ## What to submit
 
