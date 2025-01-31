@@ -27,10 +27,8 @@ Team Mates:
 **_Questions:_**
 
 1. What is the link of the fork OSProject in your repository. **_(1 mark)_**
-
    **<https://github.com/2217441/OSProject>**
 2. How many files and folders are in this repository. **_(1 mark)_**
-
    **There are 1 markdown file (README.md), 6 image files (CommittingUI.png, helloworldweb.png, newcodespace.png SourceControlUI.png, UIwebvscode.png and websitelink.png) and 1 folder (images)**
 
 ## Exploring github codespaces
