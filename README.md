@@ -535,6 +535,7 @@ e0e69016217d   bluenet   bridge    local
 5. Using the command `docker exec c1 ping c2`, which basically tries to do a ping from container c1 to c2. Are you able to ping? Show your output . **_(1 mark)_**
 
    **No**
+
 '''bash
    @2217441 ➜ /workspaces/OSProject (main) $ docker exec c1 ping c2
    ping: bad address 'c2''''
@@ -555,6 +556,7 @@ docker exec c1 ping c2
 1. Are you able to ping? Show your output . **_(1 mark)_**
 
    **Yes**
+
 '''bash
 @2217441 ➜ /workspaces/OSProject (main) $ docker exec c1 ping c2
 PING c2 (172.20.0.3): 56 data bytes
