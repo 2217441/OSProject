@@ -8,6 +8,7 @@ Team Mates:
 
 1. **AMMAR QASIEM FOOTEN BIN JOHN ANTHONY FOOTEN** and **2217441**
 2. **NURDANISH EFFENDI BIN ROESTAM EFFENDI** and **2224875**
+3.  **Haziq Mushtaq** and **2224071**
 
 ## Rules
 
