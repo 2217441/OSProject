@@ -29,6 +29,7 @@ Team Mates:
 1. What is the link of the fork OSProject in your repository. **_(1 mark)_**
 
    **<https://github.com/2217441/OSProject>**
+
 2. How many files and folders are in this repository. **_(1 mark)_**
 
    **There are 1 markdown file (README.md), 6 image files (CommittingUI.png, helloworldweb.png, newcodespace.png SourceControlUI.png, UIwebvscode.png and websitelink.png) and 1 folder (images)**
@@ -307,31 +308,31 @@ Linux codespaces-80b974 6.5.0-1025-azure #26~22.04.1-Ubuntu SMP Thu Jul 11 22:33
 
 11. What is the available free memory in the system. **_(1 mark)_**
 
-   **6.0Gi**.
+    **6.0Gi**.
 
 12. What is the available disk space mounted on /workspace. **_(1 mark)_**
 
-   **19,531,032 kb**.
+    **19,531,032 kb**.
 
 13. Name the version and hardware architecture of the linux Virtual environment. **_(1 mark)_**
 
-   **Linux codespaces-80b974 6.5.0-1025-azure #26~22.04.1-Ubuntu SMP Thu Jul 11 22:33:04 UTC 2024 x86_64 x86_64 x86_64 GNU/Linux**.
+    **Linux codespaces-80b974 6.5.0-1025-azure #26~22.04.1-Ubuntu SMP Thu Jul 11 22:33:04 UTC 2024 x86_64 x86_64 x86_64 GNU/Linux**.
 
 14. What is the difference between **ls** vs **ls -asl**. **_(1 mark)_**
 
-   **The **ls** command lists files and directories in a directory, while **ls -asl** lists files and directories in a directory in long format (-l) with detailed information, including file permissions, owner, group, size, and modification date, and sorted by size (-s) in descending order**.
+    **The **ls** command lists files and directories in a directory, while **ls -asl** lists files and directories in a directory in long format (-l) with detailed information, including file permissions, owner, group, size, and modification date, and sorted by size (-s) in descending order**.
 
 15. What is the TLB size of the Virtual CPU. **_(1 mark)_**
 
-   **2560 4k pages**.
+    **2560 4k pages**.
 
 16. What is the CPU speed of the Virtual CPU. **_(1 mark)_**
 
-   **2.4GHz for Processor 0 and 2.9GHz for Processor 1**.
+    **2.4GHz for Processor 0 and 2.9GHz for Processor 1**.
 
 17. What is the top running process that consumes the most CPU cycles. **_(1 mark)_**
 
-   **1423**.
+    **1423**.
 
 ## Running your own container instance
 
@@ -507,20 +508,21 @@ docker run -itd --net rednet --name c2 busybox sh
 
 1. Describe what is busybox and what is command switch **--name** is for? . **_(2 mark)_**
 
-      **BusyBox** is a software suite that provides many Unix utilities in a single executable, often used in embedded systems.
+   **BusyBox** is a software suite that provides many Unix utilities in a single executable, often used in embedded systems.
 
-      The **--name** switch is used to assign a specific name to a container or resource, such as in Docker.
+   The **--name** switch is used to assign a specific name to a container or resource, such as in Docker.
 
 2. Explore the network using the command `docker network ls`, show the output of your terminal. **_(1 mark)_**
 
-'''bash
+```bash
 @2217441 ➜ /workspaces/OSProject (main) $ docker network ls
 NETWORK ID     NAME      DRIVER    SCOPE
 e0e69016217d   bluenet   bridge    local
 7449123e89fe   bridge    bridge    local
 7f3d5dfd29fd   host      host      local
 885942ca4d6b   none      null      local
-18a7712013b5   rednet    bridge    local'''
+18a7712013b5   rednet    bridge    local
+```
 
 3. Using `docker inspect c1` and `docker inspect c2` inscpect the two network. What is the gateway of bluenet and rednet.? **_(1 mark)_**
 
@@ -536,9 +538,10 @@ e0e69016217d   bluenet   bridge    local
 
    **No**
 
-'''bash
+```bash
    @2217441 ➜ /workspaces/OSProject (main) $ docker exec c1 ping c2
-   ping: bad address 'c2''''
+   ping: bad address 'c2'
+```
 
 ## Bridging two SUB Networks
 
@@ -557,7 +560,7 @@ docker exec c1 ping c2
 
    **Yes**
 
-'''bash
+```bash
 @2217441 ➜ /workspaces/OSProject (main) $ docker exec c1 ping c2
 PING c2 (172.20.0.3): 56 data bytes
 64 bytes from 172.20.0.3: seq=0 ttl=64 time=0.137 ms
@@ -567,7 +570,8 @@ PING c2 (172.20.0.3): 56 data bytes
 64 bytes from 172.20.0.3: seq=4 ttl=64 time=0.080 ms
 64 bytes from 172.20.0.3: seq=5 ttl=64 time=0.077 ms
 64 bytes from 172.20.0.3: seq=6 ttl=64 time=0.091 ms
-...'''
+...
+```
 
 2. What is different from the previous ping in the section above? **_(1 mark)_**
 
