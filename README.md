@@ -42,18 +42,18 @@ Team Mates:
 
 5. Once you have created you codespace, you will see the following. You might already be familiar with this, since it will look similar to VSCode.
 
- <img src="./images/UIwebvscode.png" width="70%">
+![VSCode Web UI](./images/UIwebvscode.png)
 
 6. You will see the [README file](./README.md) file. One is a preview of how it looks like on the web, and the other is the editing view in markdown language.
 7. Edit the [README file](./README.md). Make sure you have your group details correct, ie, group name, section and team members along with their matric IDs.
 8. Once you have finish editing, click File->Save or **_ctrl-s_** to save it.
 9. After saving, you will notice an M or U next to your file. You will need to commit any changes, whenever you make changes so that it is uploaded to the github repository.
 
- <img src="./images/SourceControlUI.png" width="70%">
+![Source Control UI](./images/SourceControlUI.png)
 
 10. Click on the source control, hint: its on the left side panel, and it will list down the files that have been modified or updated. Click on commit. It will then ask you "Would you like to stage all your changes and commit them directly?" Just say yes, and a new tab will appear. Type a message to log what you have done, and click on the check mark.
 
- <img src="./images/CommittingUI.png" width="70%">
+![Committing UI](./images/CommittingUI.png)
 
 11. After that, sync the changes to the main repository.
 12. Make sure to commit and sync your files to the main repository, or else, your work will be lost since it is not saved into the main repository when you submit your project.
@@ -317,7 +317,7 @@ Linux codespaces-80b974 6.5.0-1025-azure #26~22.04.1-Ubuntu SMP Thu Jul 11 22:33
 
 1. At the terminal, run a linux instance. By typing the following command.
 
-```
+```docker
 docker pull debian
 docker run --detach -it debian
 ```
@@ -440,13 +440,13 @@ docker run --detach -v /workspaces/OSProject/webpage:/usr/local/apache2/htdocs/ 
 
 4. If it works, codespace will trigger a port assignment and provide a URL for you to access your webpage like the one below.
 
- <img src="./images/websitelink.png" width="70%">
+![Website Link](./images/websitelink.png)
 
 5. You can also see the Port in the **PORTS** tab, next to the terminal tab.
 
 6. You can then access your website by adding an index.html towards the end of your url link, like the one below.
 
- <img src="./images/helloworldweb.png" width="70%">
+![Hello World Web](./images/helloworldweb.png)
 
 **_Questions:_**
 
@@ -483,7 +483,7 @@ docker run -itd --net rednet --name c2 busybox sh
 
 1. Let's try this again by creating a network to bridge the two containers in the two subnetworks
 
-```
+```docker
 docker network create bridgenet
 docker network connect bridgenet c1
 docker network connect bridgenet c2
