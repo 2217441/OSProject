@@ -29,7 +29,7 @@ Team Mates:
 1. What is the link of the fork OSProject in your repository. **_(1 mark)_**
    **<https://github.com/2217441/OSProject>**
 2. How many files and folders are in this repository. **_(1 mark)_**
-   **There are 1 file (README.md) and 1 folder (images)**
+   **There are 1 markdown file (README.md), 6 image files (CommittingUI.png, helloworldweb.png, newcodespace.png SourceControlUI.png, UIwebvscode.png and websitelink.png) and 1 folder (images)**
 
 ## Exploring github codespaces
 
@@ -38,7 +38,7 @@ Team Mates:
 3. Click on **_New codespace_**.
 4. Choose your own OSProject repository to start your codespace.
 
- <img src="./images/newcodespace.png" width="50%">
+![New Codespace](./images/newcodespace.png)
 
 5. Once you have created you codespace, you will see the following. You might already be familiar with this, since it will look similar to VSCode.
 
@@ -60,9 +60,12 @@ Team Mates:
 
 **_Questions:_**
 
-1. What is default OS used to run the virtual environment for codespaces. **_(1 mark)_** **Ubuntu Linux**.
-2. What are the two options of ram, disk and vcpu configuration you can have in running codespaces . **_(1 mark)_** **1st Option: 2 cores, 8 GB RAM, and 32 GB storage. 2nd Option: 32 cores, 64 GB RAM, and 128 GB storage**.
-3. Why must we commit and sync our current work on source control? **_(1 mark)_** **We must commit and sync our current work on source control to ensure that no work is lost and it is updated and saved on the repository.**.
+1. What is default OS used to run the virtual environment for codespaces. **_(1 mark)_**
+   **Ubuntu Linux**.
+2. What are the two options of ram, disk and vcpu configuration you can have in running codespaces . **_(1 mark)_**
+   **1st Option: 2 cores, 8 GB RAM, and 32 GB storage. 2nd Option: 32 cores, 64 GB RAM, and 128 GB storage**.
+3. Why must we commit and sync our current work on source control? **_(1 mark)_**
+   **We must commit and sync our current work on source control to ensure that no work is lost and it is updated and saved on the repository.**.
 
 ## Exploring the Terminal
 
